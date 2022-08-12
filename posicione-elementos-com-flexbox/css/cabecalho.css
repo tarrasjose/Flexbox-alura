@@ -1,0 +1,56 @@
+/*CABEÇALHO*/
+
+/*Temos que pegar o pai container dos elementos que queremos. */
+.cabecalhoPrincipal .container {
+    display: flex;
+    align-items: center; /*Todos elementos dentro do pai que está com flex fiquem alinhados verticalmente no centro.*/
+    justify-content: space-between; /*justificar conteúdo: Espaço entre;*/
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
+
+/*MOBILE*/
+@media(max-width: 768px) {
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+    
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1; /*Mudando a ordem do nosso aplicativo no cabeçalho principal, tirando ele da ultima posição e passando para a primeira no mobile.
+        Por padrão todos eles tem a ordem 0, se quise deixar algum antes, coloca um número menor que zero, exemplo, o -1. E se quiser depois de todos é só colocar um número maior que 0, por exemplo, 1. */ 
+    }
+
+}
+
+
+
+
+
+
+
+/*
+.cabecalhoPrincipal-titulo {
+
+
+    /*display: inline-block;
+    vertical-align:  middle;
+    
+}
+
+.cabecalhoPrincipal-nav {
+
+
+
+    /*display: inline-block;
+    vertical-align: middle;
+}
+
+*/

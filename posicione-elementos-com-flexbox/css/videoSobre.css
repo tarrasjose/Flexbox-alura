@@ -1,0 +1,29 @@
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /*Display flex e flex direction deixou o botão ficou 100% com altura completa. Display flex alinhou o tamanho dos flex items e mudando para column ele mudou o eixo, ele então aumentou o tamanho na horizontal*/
+    flex-grow: 2; /*Cresça o tamanho que sobrou.*/
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+.videoSobre-video {
+    flex-grow: 1; /*E o video aumentou um pouco também, o navegador pegou e dividiu o espaço em dois um pra lista acima e outro para o video*/
+    flex-shrink: 2;/*Que o video diminua 2 vezes mais do que o meu Vantagens do Alurinha, se por exemplo colocar flex-shrink: 0; o video não vai diminuir de jeito nenhum*/
+}
+
+@media (max-width: 768px) {
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
+    }
+}

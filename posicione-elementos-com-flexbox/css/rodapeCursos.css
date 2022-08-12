@@ -1,0 +1,17 @@
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*flex-flow: column wrap; Coloca os dois acima juntos*/
+    height: 260px;
+}
+
+/*MOBILE*/
+
+@media(max-width: 768px) {
+    .rodapePrincipal-navMap-list {
+        height: auto; /*Ele calcula altura automaticamente e tira o 260px acima do desktop*/
+    }
+}
+
+

@@ -1,0 +1,63 @@
+.flexContainer:last-child {margin-top: 2em; }
+body {margin: 0; padding: 0; }
+div {height: 50px; width: 50px; }
+div:nth-child(1) {background-color: red; width: 80px; height: 80px;}
+div:nth-child(2) {background-color: blue; }
+div:nth-child(3) {background-color: green; }
+div:nth-child(4) {background-color: yellow; }
+div:nth-child(5) {background-color: pink; }
+div:nth-child(6) {background-color: black; }
+div:nth-child(7) {background-color: orange; }
+div:nth-child(8) {background-color: silver; }
+
+.flexContainer {
+    display: flex;
+}
+/*
+.flexItem {
+    flex-grow: 1;
+    flex: 1 1 200px; Posso usar assim para definir junto os valores do grow e shrink e basis, o primeiro é grow, o segundo é o shrink e o terceiro é basis ou pode somente usar o grow shrink sem o basis também.
+
+    
+    flex-grow aumenta e shrink diminui
+}
+*/
+.primeiro { 
+    /*flex-grow: 2; Pega o espaço vazio e vai dividir pela quantidade de flex-grow que tem, temos quatro pedaços, cada um vai receber uma fatia igual desse espaço vazio 
+
+    Se apenas um item ter flex-grow 2 e todas as outras 3 terem flex-grow 1, dará um total de 5, o primeiro pedaço que tem flex-grow 2 pegará duas fatias desse espaço vazio, o segundo, o terceiro e o quarto pedaço que tem flex-grow 1, pegarão cada um 1 fatia desse espaço vazio.
+
+    Se o primeiro item recebe flex-grow 3 e os três items recebem flex-grow 2, o primeiro item pegará 3 fatias do espaço vazio, o segundo pegará 2 fatias, o terceiro 2 fatias e o quarto 2 fatias, totalizando 9 fatias do espaço vazio.
+
+    O flex-grow tem por padrão 0, flex-grow 0 significa que os elementos não vão crescer automaticamente, vão se manter no tamanho original.
+    */
+    flex-shrink: 1;
+
+    /*
+    se cada um dos quatro items tiverem width de 50px numa tela de 200, cada um terá seus 50px normal.
+    se cada um dos quatro items tiverem de width 50px numa tela de 100px, eles vão se expremer igual para se encaixar nos 100px, ficando cada um com 25px.
+
+    Se colocarmos um flex-shrink em alguma class nada vai acontecer, pois o padrão do flex-shrink é 1, todos eles diminuem igual.
+
+    por exemplo se colocarmos na class .primeiro flex-shrink 2 e na class .flexItem que tem 3 items flex-shrink 1. No primeiro item receberá 2, o segundo 1, o terceiro 1 e o quarto 1. Espaço 100/5 = 20, a fatia equivale a 20px. O primeiro com shrink 2 dimunui 2 vezes esses 20px, um total de 40px. Como por padrão cada um desses elementos tinham 50px, 50-40= 10px, o primeiro elemento ficará com 10px, e os que por padrão também tinham 50px, diminuindo 20, ficarão com 30px o segundo, o terceiro e o quarto elemento,.
+
+    
+    Já o shrink serve para diminuir as coisas
+    Se colocar shrink 1 não muda nada todos os items irão diminuir igual, caso queira que o item diminua mais que os outros, exemplo na class .primeiro coloca flex-shrink 2 e ela vai diminuir duas mais que os outros.
+
+    Outro exemplo é se colocar flex-shrink 0, ele não aceita diminuição, mesmo diminuindo o width da tela por exemplo, mesmo diminuindo o navegador para manter os elementos aparecendo na tela o navegador dará um zoom, mas se inspecionar verá que os elementos estarão no mesmo tamanho.
+    */
+
+
+}
+
+.flexItem {
+    flex-shrink: 2;
+    /*flex-basis: 200px;
+
+    flex-basis ele difine uma largura para os elementos, colocando 200px cada um dos quatros elementos ficarão com esse valor, ele é basicamente uma width, uma largura dos elementos
+    */
+}
+
+
+
